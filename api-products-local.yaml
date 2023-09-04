@@ -25,6 +25,8 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
+  registerWithEureka: true
+  fetchRegistry: true
