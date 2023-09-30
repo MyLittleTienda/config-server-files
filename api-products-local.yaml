@@ -5,9 +5,9 @@ spring:
     name: api-products
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mlt-products
+    url: jdbc:mysql://mlt-api-products:southamerica-west1:mlt-products
     username: root
-    password: root
+    password: mlt-api-products
   jpa:
     hibernate:
       ddl-auto: validate
@@ -22,11 +22,3 @@ logging:
         type:
           descriptor:
             sql: trace
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-    instance:
-      preferIpAddress: true
-    registerWithEureka: true
-    fetchRegistry: true
